@@ -112,6 +112,12 @@ picam2.configure(
         controls={"FrameDurationLimits": (frameDuration, frameDuration)},
     )
 )
+
+picam2.set_controls({
+    "AfMode": controls.AfModeEnum.Manual,
+    "LensPosition": 0.0
+})
+
 output = StreamingOutput()
 picam2.start_recording(MJPEGEncoder(), FileOutput(output))
 
