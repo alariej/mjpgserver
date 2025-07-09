@@ -11,6 +11,7 @@ from threading import Condition
 from picamera2 import Picamera2
 from picamera2.encoders import MJPEGEncoder
 from picamera2.outputs import FileOutput
+from libcamera import controls
 
 PAGE = """\
 <html>
